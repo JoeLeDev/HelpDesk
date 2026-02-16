@@ -1,0 +1,39 @@
+{
+    "name": "@helpdesk/shared",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        }
+    },
+    "scripts": {
+        "build": "tsc -p tsconfig.json",
+        "dev": "tsc -p tsconfig.json -w"
+    },
+    "dependencies": {
+        "zod": "^3.25.76"
+    },
+    "compilerOptions": {
+        "compilerOptions": {
+            "target": "ES2020",
+            "module": "ESNext",
+            "declaration": true,
+            "outDir": "dist",
+            "rootDir": "src",
+            "strict": true,
+            "moduleResolution": "Bundler",
+            "skipLibCheck": true
+        },
+        "include": [
+            "src"
+        ]
+    },
+    "devDependencies": {
+        "typescript": "^5.9.3"
+    }
+}
